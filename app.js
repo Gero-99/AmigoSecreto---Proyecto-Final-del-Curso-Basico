@@ -1,8 +1,21 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
 
-let maximoAmigos = 5;
+let maximoAmigos = 10;
 let amigoSecreto = []; //vamos a trabajar con este.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -37,9 +50,9 @@ function agregarAmigo() {
 
 
     }
-
-console.log(amigoSecreto);
-    mensaje('input', '');
+    cleaner();
+   
+   
 
     return;
 
@@ -47,12 +60,21 @@ console.log(amigoSecreto);
 
 
 
-
-
-
 function mensaje(etiqueta, texto) {
     let test = document.querySelector(etiqueta);
     test.innerHTML = texto;
+    return;
+};
+
+
+
+
+
+function cleaner() {
+    let clear = document.querySelector('#amigo');
+    clear.value = '';
+
+
     return;
 }
 
@@ -61,21 +83,28 @@ function mensaje(etiqueta, texto) {
 
 
 
+
+
+
+
+
+
+// Accede a la lista de amigos y selecciona a uno al azar.
 function sortearAmigo(etiqueta, texto) {
 
     
 
 
-let amigoAleatorio = parseInt((Math.random() * maximoAmigos)+1);
+let amigoAleatorio = parseInt((Math.random() * amigoSecreto.length));
 
 
-mensaje('h2',`El amigo seleccionado es: ${amigoSecreto[amigoAleatorio-1]}`)
+mensaje('h2',`El amigo seleccionado es: ${amigoSecreto[amigoAleatorio]}`)
 
 
 return;
 
     
-}
+};
 
 
 
