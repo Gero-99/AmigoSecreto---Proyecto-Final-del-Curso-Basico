@@ -33,13 +33,49 @@ function agregarAmigo() {
         }
 
         amigoSecreto.push(amigo);     
-        console.log(amigoSecreto);
+       
 
 
     }
 
+console.log(amigoSecreto);
+    mensaje('input', '');
+
     return;
 
 };
+
+
+
+
+
+
+function mensaje(etiqueta, texto) {
+    let test = document.querySelector(etiqueta);
+    test.innerHTML = texto;
+    return;
+}
+
+
+
+
+
+
+function sortearAmigo(etiqueta, texto) {
+
+    
+
+
+let amigoAleatorio = parseInt((Math.random() * maximoAmigos)+1);
+
+
+mensaje('h2',`El amigo seleccionado es: ${amigoSecreto[amigoAleatorio-1]}`)
+
+
+return;
+
+    
+}
+
 
 
