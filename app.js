@@ -57,7 +57,7 @@ function agregarAmigo() {
     return;
 
 };
-
+ 
 
 
 function mensaje(etiqueta, texto) {
